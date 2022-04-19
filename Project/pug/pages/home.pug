@@ -1,0 +1,80 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Home Page
+        // Import Css Links
+        include ../layout/css-links.pug
+
+    body.home 
+        // ============================================ Header ==============================================
+        include ../components/header.pug
+
+        // ============================================ Home ================================================
+        section.Home#Home
+            img#wave-img(src="../images/wave.png", alt="wave")
+            h1 Fresh And #[span Organic] Products For Your
+            p Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Aliquam #[br]  Libero Nostrum Veniam Facere Tempore Nisi.
+            button.btn Shop Now
+
+        // =========================================== Feutures =============================================
+        section.Feutures#Feutures
+            +title("Our", "Feutures")
+            .boxes-container
+            template 
+                +card(null, null, null)
+
+        // ============================================ Product =============================================
+        // First Product Section
+        section.firstProduct#firstProduct
+            +title("Our", "Product")
+            h1.product-title Fresh And #[span#type Organic]
+            .boxes-container.swiper
+                .swiper-wrapper 
+                    template 
+                        +product(null, null, null, null)
+                .swiper-pagination
+
+        // Second Product Section
+        section.secondProduct#secondProduct
+            h1.product-title Fresh And #[span#type Organic]
+            .boxes-container.swiper
+                .swiper-wrapper 
+                    template 
+                        +product(null, null, null, null)
+                .swiper-pagination
+
+        // ========================================== Catagories ============================================
+        section.Catagories#Catagories
+            +title("Product", "Categories")
+            .boxes-container 
+            template 
+                +card(null, null, null)
+
+        // ========================================== Reviews ===============================================
+        section.Reviews#Reviews
+            +title("Customer's ", "Review")
+            .boxes-container.swiper 
+                .swiper-wrapper
+                    template 
+                        +review(null, null, null)
+                .swiper-pagination 
+
+        // ========================================== Blogs =================================================
+        section.Blogs#Blogs
+            +title("Our", "Blogs")
+            .boxes-container 
+                template
+                    +blogs(null, null, null, null)
+
+        // ========================================== Footer ================================================
+        include ../components/footer.pug
+
+        // ========================================== JavaScript ============================================
+        // Import Javascript Links
+        include ../layout/js-links.pug
+
+        // Import The Home.js Link And Make It Work As A Module
+        script(type="module" src="../js/pages/home.js" defer) 

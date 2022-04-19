@@ -1,0 +1,110 @@
+@use "../helpers/global" as *;
+@use "../helpers/mixins" as *;
+footer.Footer#Footer {
+	padding: 1rem 5%;
+	background: Get(white);
+	.boxes-container {
+		@include Flex(space-between, flex-start);
+		flex-wrap: wrap;
+		.logo {
+			line-height: 2;
+			margin-bottom: 12px;
+			a {
+				color: Get(light-color);
+				font-size: 23px;
+				.fa {
+					color: Get(second-color);
+					font-size: 28px;
+					font-weight: large;
+					animation: logo 2s infinite ease-in-out;
+				}
+				span {
+					color: Get(dark);
+					font-weight: 900;
+				}
+			}
+			.icons i.fab {
+				background: Get(light-bg);
+				color: Get(dark);
+				font-size: 25px;
+				padding: 15px;
+				margin: 20px 3px 10px;
+				border-radius: 5px;
+				cursor: pointer;
+				&:hover {
+					background: Get(second-color);
+					color: Get(white);
+				}
+			}
+		}
+		.box {
+			color: Get(light-color);
+			width: 350px;
+			line-height: 2;
+			h3 {
+				color: Get(black);
+				margin-bottom: 12px;
+			}
+			.row {
+				width: fit-content;
+				display: flex;
+				padding-bottom: Get(m2);
+				cursor: pointer;
+				&:hover {
+					i {
+						color: Get(light-color);
+					}
+					p,
+					a {
+						color: Get(second-color);
+						padding-left: 35px;
+					}
+				}
+				i {
+					color: Get(second-color);
+					width: fit-content;
+				}
+				a {
+					width: fit-content;
+					color: Get(light-color);
+					padding-left: 15px;
+					cursor: pointer;
+				}
+				p {
+					@extend a;
+				}
+			}
+		}
+		.letter-box {
+			line-height: 2;
+			color: Get(black);
+			form {
+				input {
+					background: Get(light-bg);
+					width: 20rem;
+					padding: 10px;
+					margin: 7px 0;
+					font-size: 20px;
+					display: block;
+					@include Width(md) {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	.footer {
+		text-align: center;
+		border-top: Get(border);
+		padding-top: 1.1em;
+		p {
+			color: Get(dark);
+			font-size: 1.2em;
+			span {
+				color: Get(second-color);
+				font-size: 1.3em;
+				font-weight: bold;
+			}
+		}
+	}
+}

@@ -1,0 +1,210 @@
+{
+	"Feutures": [
+		{
+			"img": "feature-img-1.png",
+			"title": "Fresh And Organic",
+			"content": "Lorem, Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Deserunt, Earum!"
+		},
+		{
+			"img": "feature-img-2.png",
+			"title": "Free Delivery",
+			"content": "Lorem, Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Deserunt, Earum!"
+		},
+		{
+			"img": "feature-img-3.png",
+			"title": "Easy Payments",
+			"content": "Lorem, Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Deserunt, Earum!"
+		},
+		{
+			"img": "feature-img-2.png",
+			"title": "Free Delivery",
+			"content": "Lorem, Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Deserunt, Earum!"
+		},
+		{
+			"img": "feature-img-1.png",
+			"title": "Fresh And Organic",
+			"content": "Lorem, Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Deserunt, Earum!"
+		}
+	],
+	"Products": {
+		"firstProduct": [
+			{
+				"img": "product-1.png",
+				"title": "Fresh Orange",
+				"new": "4.99",
+				"old": "10.99",
+				"content": "Lorem, Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Deserunt, Earum!"
+			},
+			{
+				"img": "product-2.png",
+				"title": "Fresh Onion",
+				"new": "14.99",
+				"old": "20.99",
+				"content": "Lorem, Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Deserunt, Earum!"
+			},
+			{
+				"img": "product-3.png",
+				"title": "Fresh Meat",
+				"new": "24.99",
+				"old": "40.99",
+				"content": "Lorem, Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Deserunt, Earum!"
+			},
+			{
+				"img": "product-4.png",
+				"title": "Fresh Cabbage",
+				"new": "44.99",
+				"old": "50.99",
+				"content": "Lorem, Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Deserunt, Earum!"
+			},
+			{
+				"img": "product-5.png",
+				"title": "Fresh Potato",
+				"new": "54.99",
+				"old": "60.99",
+				"content": "Lorem, Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Deserunt, Earum!"
+			},
+			{
+				"img": "product-6.png",
+				"title": "Fresh Avocado",
+				"new": "64.99",
+				"old": "70.99",
+				"content": "Lorem, Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Deserunt, Earum!"
+			}
+		],
+		"secondProduct": [
+			{
+				"img": "product-5.png",
+				"title": "Fresh Potato",
+				"new": "4.99",
+				"old": "10.99",
+				"content": "Lorem, Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Deserunt, Earum!"
+			},
+			{
+				"img": "product-6.png",
+				"title": "Fresh Avocado",
+				"new": "14.99",
+				"old": "20.99",
+				"content": "Lorem, Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Deserunt, Earum!"
+			},
+			{
+				"img": "product-7.png",
+				"title": "Fresh Carrot",
+				"new": "24.99",
+				"old": "40.99",
+				"content": "Lorem, Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Deserunt, Earum!"
+			},
+			{
+				"img": "product-8.png",
+				"title": "Fresh Limon",
+				"new": "44.99",
+				"old": "50.99",
+				"content": "Lorem, Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Deserunt, Earum!"
+			},
+			{
+				"img": "product-1.png",
+				"title": "Fresh Orange",
+				"new": "54.99",
+				"old": "60.99",
+				"content": "Lorem, Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Deserunt, Earum!"
+			},
+			{
+				"img": "product-2.png",
+				"title": "Fresh Onion",
+				"new": "64.99",
+				"old": "70.99",
+				"content": "Lorem, Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Deserunt, Earum!"
+			}
+		]
+	},
+	"Catagories": [
+		{
+			"img": "cat-1.png",
+			"title": "Vegetables",
+			"discount": "UpTo 35 Off"
+		},
+		{
+			"img": "cat-2.png",
+			"title": "Free Delivery",
+			"discount": "UpTo 45 Off"
+		},
+		{
+			"img": "cat-3.png",
+			"title": "Dairy Products",
+			"discount": "UpTo 55 Off"
+		},
+		{
+			"img": "cat-4.png",
+			"title": "Fresh Meats",
+			"discount": "UpTo 65 Off"
+		},
+		{
+			"img": "cat-1.png",
+			"title": "Vegetables",
+			"discount": "UpTo 35 Off"
+		},
+		{
+			"img": "cat-3.png",
+			"title": "Dairy Products",
+			"discount": "UpTo 55 Off"
+		},
+		{
+			"img": "cat-2.png",
+			"title": "Fresh Fruits",
+			"discount": "UpTo 35 Off"
+		}
+	],
+	"Reviews": [
+		{
+			"img": "pic-1.png",
+			"title": "Shehab Ayman",
+			"content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde sunt fugiat dolore ipsum id est maxime ad tempore quasi tenetur."
+		},
+		{
+			"img": "pic-2.png",
+			"title": "Aya Mahmoud",
+			"content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde sunt fugiat dolore ipsum id est maxime ad tempore quasi tenetur."
+		},
+		{
+			"img": "pic-3.png",
+			"title": "Hesham Mohamed",
+			"content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde sunt fugiat dolore ipsum id est maxime ad tempore quasi tenetur."
+		},
+		{
+			"img": "pic-4.png",
+			"title": "Salma Shehab",
+			"content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde sunt fugiat dolore ipsum id est maxime ad tempore quasi tenetur."
+		}
+	],
+	"Blogs": [
+		{
+			"img": "blog-1.jpg",
+			"title": "Fresh And Organic",
+			"date": "1<sup>st</sup> May, 2022",
+			"content": "Lorem, Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Deserunt, Earum!"
+		},
+		{
+			"img": "blog-2.jpg",
+			"title": "Vegitables And Fruits",
+			"date": "5<sup>st</sup> January, 2022",
+			"content": "Lorem, Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Deserunt, Earum!"
+		},
+		{
+			"img": "blog-3.jpg",
+			"title": "Fresh And Organic",
+			"date": "15<sup>st</sup> April, 2022",
+			"content": "Lorem, Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Deserunt, Earum!"
+		},
+		{
+			"img": "blog-2.jpg",
+			"title": "Fresh And Organic",
+			"date": "10<sup>st</sup> January, 2022",
+			"content": "Lorem, Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Deserunt, Earum!"
+		},
+		{
+			"img": "blog-3.jpg",
+			"title": "Vegitables And Fruits",
+			"date": "25<sup>st</sup> January, 2022",
+			"content": "Lorem, Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Deserunt, Earum!"
+		}
+	]
+}

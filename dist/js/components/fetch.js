@@ -1,0 +1,1 @@
+async function Fetch(e,n,a,c,h,o){await fetch("../js/API/api.json").then(t=>t.json()).then(t=>{e(t),n(t),a(t),c(t),h(t),o(t)})}export default Fetch;

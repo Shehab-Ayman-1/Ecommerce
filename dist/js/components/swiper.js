@@ -1,0 +1,1 @@
+let swiper=new Swiper(".swiper",{spaceBetween:20,grabCursor:!0,pagination:{el:".swiper-pagination",clickable:!0},autoplay:{delay:5e3,disableOnInteraction:!1},breakpoints:{0:{slidesPerView:1},768:{slidesPerView:2},1024:{slidesPerView:3}}});export default swiper;

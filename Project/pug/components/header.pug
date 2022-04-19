@@ -1,0 +1,31 @@
+header
+    .logo 
+        a(href="#") #[i.fa.fa-shopping-basket] #[span Groco.]
+
+    nav.Navbar 
+        a(href="./home.html") Home
+        a(href="./about.html") About
+        a(href="./services.html") Services
+        a(href="./blogs.html") Blogs
+        a(href="./contact.html") Contact
+
+    .icons
+        i.fa.fa-bars(id="BarsButton")
+        i.fa.fa-search(id="SearchButton")
+        i.fa.fa-shopping-cart(id="SearchButton")
+        i.fa.fa-user(id="UserButton")
+        i.fa.fa-moon(id="nightMode")
+
+    .search-form 
+        input#Search(type="search" placeholder="Search Here....")
+        label(for="Search" class="fa fa-search")
+
+    .user-form 
+        h1 Login Now
+        form(action="#") 
+            input(type="email" placeholder="Your Email")
+            input(type="password" placeholder="Your Password")
+            p Forget Your Password. #[a(href="#") Click Here]
+            p Don't Have An Account. #[a(href="#") Create Now]
+            button.btn Login Now 
+

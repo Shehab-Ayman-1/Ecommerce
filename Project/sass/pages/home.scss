@@ -1,0 +1,260 @@
+@use "../helpers/global" as *;
+@use "../helpers/mixins" as *;
+@use "../components/header" as *;
+@use "../components/footer" as *;
+body.home {
+	background-color: Get(light-bg);
+	@include Width(md) {
+		font-size: 0.8em;
+	}
+	&.nightMode {
+		section.Home#Home {
+			filter: brightness(0.65);
+			#wave-img {
+				filter: invert(0.9);
+			}
+			h1 {
+				color: Get(white);
+			}
+			p {
+				color: Get(white);
+			}
+			button {
+				color: Get(white);
+			}
+		}
+	}
+	header {
+		position: fixed;
+	}
+	section.Home#Home {
+		@include Flex(center, center);
+		background: url(../images/banner-bg.webp) no-repeat;
+		background-position: center;
+		background-size: 100% 100%;
+		width: 100%;
+		height: 100vh;
+		text-align: center;
+		flex-direction: column;
+		position: relative;
+		@include Width(md) {
+			background-size: cover;
+		}
+		#wave-img {
+			@include Absolute(bl, 0, 0);
+			width: 100%;
+			filter: invert(0.07);
+		}
+		h1 {
+			color: Get(black);
+			font-size: 2.2em;
+			span {
+				color: Get(second-color);
+			}
+			@include Width(sm) {
+				font-size: 1.5em;
+			}
+		}
+		p {
+			color: Get(light-color);
+			font-size: 0.9em;
+			font-weight: 500;
+			line-height: 2;
+			@include Width(sm) {
+				font-size: 0.7em;
+			}
+		}
+	}
+	section.Feutures#Feutures {
+		padding: 1rem 7%;
+		.boxes-container {
+			@include Grid(300px);
+			@include Width(sm) {
+				@include Grid(200px);
+			}
+			.box {
+				@extend %box;
+				img {
+					width: 200px;
+					height: 150px;
+					@include Width(sm) {
+						width: 100%;
+					}
+				}
+				h3 {
+					color: Get(dark);
+					font-size: 1.5em;
+					padding: Get(p1) 0;
+				}
+				p {
+					color: Get(light-color);
+					font-size: 0.8em;
+					padding: padding(p0, p1);
+				}
+			}
+		}
+	}
+	section.firstProduct#firstProduct,
+	section.secondProduct#secondProduct {
+		padding: 1rem 7%;
+		.product-title {
+			color: Get(dark);
+			font-size: 2em;
+			padding-bottom: 20px;
+			#type {
+				color: Get(second-color);
+				font-weight: bold;
+			}
+			@include Width(lg) {
+				font-size: 1.9em;
+			}
+			@include Width(md) {
+				font-size: 1.7em;
+			}
+			@include Width(sm) {
+				font-size: 1.5em;
+			}
+			@include Width(xsm) {
+				font-size: 1.3em;
+			}
+		}
+		.boxes-container {
+			padding: 15px;
+			.box {
+				@extend %box;
+				transition: 0.2s ease-in-out;
+				img {
+					width: 200px;
+					height: 200px;
+					margin-bottom: Get(m5);
+				}
+				#title {
+					color: Get(dark);
+					font-weight: bold;
+				}
+				#new {
+					color: Get(dark);
+					font-size: 1.6em;
+					font-weight: bold;
+				}
+				#old {
+					color: Get(second-color);
+					font-size: 1.4;
+					text-decoration: line-through !important;
+				}
+				.stars {
+					i {
+						color: Get(second-color);
+						font-size: 1em;
+					}
+				}
+			}
+		}
+	}
+	section.Catagories#Catagories {
+		padding: 1rem 7%;
+		.boxes-container {
+			@include Grid(300px);
+			@include Width(sm) {
+				@include Grid(200px);
+			}
+			.box {
+				@extend %box;
+				margin: Get(p4) 0;
+				img {
+					width: 200px;
+					height: 200px;
+				}
+				h3 {
+					color: Get(dark);
+					font-size: 1.7em;
+					font-weight: bold;
+				}
+				p {
+					color: Get(second-color);
+					font-size: 1.1em;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+	section.Reviews#Reviews {
+		padding: 1rem 7%;
+		.boxes-container {
+			padding: 15px;
+			.box {
+				@extend %box;
+				transition: 0.2s ease-in-out;
+				img {
+					width: 100px;
+					height: 100px;
+					border-radius: 100%;
+				}
+				#title {
+					color: Get(dark);
+					font-size: 1.3em;
+					font-weight: bold;
+				}
+				p {
+					color: Get(light-color);
+					font-size: 0.8em;
+					padding: padding(p1, p2);
+				}
+				.stars i {
+					color: Get(second-color);
+					font-size: 1em;
+				}
+			}
+		}
+	}
+	section.Blogs#Blogs {
+		padding: 1rem 7%;
+		.boxes-container {
+			@include Grid(350px);
+			@include Width(sm) {
+				@include Grid(200px);
+			}
+			.box {
+				background-color: Get(white);
+				overflow: hidden;
+				cursor: pointer;
+				border-radius: Get(r1);
+				&:hover {
+					box-shadow: Get(box-shadow);
+					img {
+						transform: scale(1.1);
+					}
+				}
+				.img {
+					overflow: hidden;
+					img {
+						width: 100%;
+						height: 220px;
+					}
+				}
+				.state {
+					@include Flex(space-between, center);
+					color: Get(dark);
+					margin: padding(m1, m2);
+					border-bottom: Get(border);
+					i {
+						color: Get(second-color);
+						font-size: 1em;
+					}
+				}
+				.content {
+					padding: padding(p1, p2);
+					h3 {
+						color: Get(dark);
+						font-size: 1.3em;
+						font-weight: bold;
+					}
+					p {
+						color: Get(light-color);
+						font-size: 0.8em;
+					}
+				}
+			}
+		}
+	}
+}

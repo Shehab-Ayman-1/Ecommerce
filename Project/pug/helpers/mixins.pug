@@ -1,0 +1,42 @@
+//- title
+mixin title(title1, title2)
+    h1.title #{ title1 } #[span #{ title2 }]
+
+//- Feutures & Catagories
+mixin card(img, title, content)
+    .box
+        .img #[img(src="../images/" + img)]
+        .content 
+            h3 #{title}
+            p #{content}
+            button.btn Read More
+
+//- Products
+mixin product(img, title, New, old, content)
+    .swiper-slide.box
+        img#image(src="../images/"+ img)
+        h3#title #{title}
+        p #[span#new #{New}] #[span#old #{old}]
+        p#content #{title}
+        .stars #[i.fa.fa-star] #[i.fa.fa-star] #[i.fa.fa-star] #[i.fa.fa-star] #[i.fa.fa-star-half]
+        button.btn Add To Cart
+
+//- Blogs
+mixin blogs(img, title, content, date)
+    .box 
+        .img #[img(src="../images/" + img, alt="blog image")]
+        .state 
+            .side #[i.fa.fa-user] By User
+            .side #[i.fa.fa-calendar] #[span#date ${date}]
+        .content 
+            h3 ${title}
+            p ${content}
+            button.btn Read More
+
+//- Reviews
+mixin review(img, title, content)
+    .box.swiper-slide
+        img(src="../images/" + img, alt="Images")
+        p #{content}
+        h3#title #{title}
+        .stars #[i.fa.fa-star] #[i.fa.fa-star] #[i.fa.fa-star] #[i.fa.fa-star] #[i.fa.fa-star-half]

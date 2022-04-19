@@ -1,0 +1,227 @@
+@use "../helpers/global" as *;
+@use "../helpers/mixins" as *;
+header {
+	@include Sticky(tl, 0, 0);
+	@include Flex(space-around, center);
+	background-color: Get(white);
+	width: 100%;
+	padding: Get(p1);
+	z-index: 1000;
+	box-shadow: 5px -5px 15px Get(second-color);
+	&.Active {
+		background-color: transparent;
+		.icons i {
+			opacity: 0.5;
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+	.logo {
+		a {
+			i {
+				color: Get(second-color);
+				font-size: 38px;
+				animation: logo 2s infinite ease-in-out;
+				@include Width(sm) {
+					font-size: 28px;
+				}
+				@include Width(xsm) {
+					font-size: 18px;
+				}
+			}
+			span {
+				color: Get(dark);
+				font-size: 28px;
+				font-weight: 900;
+				@include Width(md) {
+					font-size: 25px;
+				}
+				@include Width(sm) {
+					font-size: 22px;
+				}
+				@include Width(xsm) {
+					font-size: 16px;
+				}
+			}
+			@keyframes logo {
+				0%,
+				100% {
+					transform: translateY(5px);
+				}
+				50% {
+					transform: translateY(-5px);
+				}
+			}
+		}
+	}
+	.Navbar {
+		@include Width(md) {
+			@include Absolute(tr, 100%, 0);
+			background: Get(white);
+			width: 100%;
+			clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%);
+			&.Active {
+				clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+			}
+		}
+		a {
+			color: Get(dark);
+			font-size: 18px;
+			font-weight: 500;
+			padding: Get(p1);
+			&:hover {
+				color: Get(second-color);
+			}
+			@include Width(md) {
+				color: Get(dark);
+				display: block;
+				padding: Get(p2);
+				margin: 0 Get(m1);
+				text-align: center;
+			}
+		}
+	}
+	.icons {
+		i {
+			background: Get(light-bg);
+			color: Get(dark);
+			font-size: 25px;
+			padding: 15px;
+			margin: 2px 3px;
+			border-radius: 5px;
+			cursor: pointer;
+			@include Width(sm) {
+				font-size: 14px;
+				padding: 8px;
+			}
+			@include Width(xsm) {
+				font-size: 12px;
+				padding: 5px;
+			}
+			&:hover {
+				color: Get(second-color);
+			}
+			&.fa-bars {
+				display: none;
+				@include Width(md) {
+					display: initial;
+				}
+			}
+		}
+	}
+	.search-form {
+		@include Flex(space-between, center);
+		@include Absolute(tr, 110%, 2%);
+		background-color: Get(white);
+		width: 400px;
+		padding: 10px 20px;
+		border: Get(border);
+		border-radius: Get(r1);
+		clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%);
+		@include Width(xsm) {
+			width: 96%;
+		}
+		&.Active {
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+		}
+		input {
+			background: transparent;
+			color: Get(black);
+			width: 100%;
+			padding: Get(p1);
+			font-size: 23px;
+			@include Width(md) {
+				font-size: 18px;
+				padding: Get(p0);
+			}
+			@include Width(sm) {
+				font-size: 16px;
+			}
+		}
+		label {
+			color: Get(dark);
+			font-size: 23px;
+			cursor: pointer;
+			&:hover {
+				color: Get(second-color);
+			}
+		}
+	}
+	.user-form {
+		@include Absolute(tr, 110%, 2%);
+		background-color: Get(white);
+		width: 350px;
+		padding: Get(p4) Get(p2);
+		text-align: center;
+		border: Get(border);
+		border-radius: Get(r1);
+		clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%);
+		@include Width(md) {
+			clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%);
+		}
+		@include Width(xsm) {
+			width: 96%;
+		}
+		&.Active {
+			clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+		}
+		h1 {
+			color: Get(black);
+			font-size: 30px;
+			margin-bottom: 10px;
+			text-transform: uppercase;
+			text-shadow: 2px 2px 5px Get(second-color);
+		}
+		input {
+			background: Get(light-bg);
+			width: 100%;
+			padding: Get(p1);
+			margin: 7px 0 20px;
+			font-size: 20px;
+			@include Width(md) {
+				font-size: 18px;
+			}
+			@include Width(sm) {
+				font-size: 16px;
+			}
+		}
+		p {
+			color: Get(black);
+			font-size: 17px;
+			line-height: 2;
+			text-align: left;
+			a {
+				color: Get(second-color);
+				font-weight: bold;
+				text-decoration: underline solid !important;
+			}
+		}
+		button {
+			width: 100%;
+		}
+	}
+}
+
+// Scroller Button
+.page-scroller {
+	@include Fixed(br, 50px, 50px);
+	background-color: Get(white);
+	color: Get(second-color);
+	width: 50px;
+	height: 70px;
+	font-size: 50px;
+	z-index: 1000;
+	line-height: 1.4 !important;
+	box-shadow: Get(box-shadow);
+	animation: logo 2s infinite ease-in-out;
+	border-radius: 50% 50% 23% 77% / 72% 80% 20% 28%;
+	&:hover {
+		background-color: Get(second-color);
+		color: Get(white);
+	}
+	&.fa-caret-down {
+		border-radius: 85% 15% 53% 47% / 24% 22% 78% 76%;
+		line-height: 1.3 !important;
+	}
+}

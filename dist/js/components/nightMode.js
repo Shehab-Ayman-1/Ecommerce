@@ -1,0 +1,1 @@
+const nightMode=()=>{let e=document.querySelector("header #nightMode"),o=document.body;e.onclick=()=>{o.classList.toggle("nightMode"),"home nightMode"===o.className?e.className="fa fa-sun":e.className="fa fa-moon"}};export default nightMode;
