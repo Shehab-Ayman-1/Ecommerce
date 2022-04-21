@@ -1,4 +1,10 @@
-let swiper = new Swiper(".swiper", {
+export const Fetch = (Object.prototype.fetchData = function (...methods) {
+	fetch("../js/API/api.json")
+		.then((res) => res.json())
+		.then((data) => methods.forEach((method) => method(data)));
+});
+
+export const swiper = new Swiper(".swiper", {
 	spaceBetween: 20,
 	grabCursor: true,
 	pagination: { el: ".swiper-pagination", clickable: true },
@@ -9,5 +15,3 @@ let swiper = new Swiper(".swiper", {
 		1024: { slidesPerView: 3 },
 	},
 });
-
-export default swiper;

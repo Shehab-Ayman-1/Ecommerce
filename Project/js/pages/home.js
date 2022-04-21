@@ -1,10 +1,7 @@
 import Header from "../components/header.js";
 import nightMode from "../components/nightMode.js";
-import swiper from "../components/swiper.js";
-import Fetch from "../components/fetch.js";
-Header();
-nightMode();
-Fetch(Feutures, Catagories, Blogs, firstProduct, secondProduct, Reviews);
+import { Fetch, swiper } from "../components/exports.js";
+Header(), nightMode("home"), new Fetch(Feutures, Catagories, Blogs, firstProduct, secondProduct, Reviews);
 
 // About Section
 function Feutures(apiData) {
