@@ -1,10 +1,11 @@
+- let pageTitle = "Home"
 doctype html
 html(lang="en")
     head
         include ../layout/head.pug
-        title Home Page
+        title #{pageTitle} Page
 
-    body.home 
+    body.home
         // ============================================ Header ==============================================
         include ../components/header.pug
 

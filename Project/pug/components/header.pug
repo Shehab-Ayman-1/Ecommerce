@@ -1,13 +1,14 @@
+- let activePage = "active-page"
 header
     .logo 
         a(href="#") #[i.fa.fa-shopping-basket] #[span Groco.]
 
     nav.Navbar 
-        a(href="./home.html") Home
-        a(href="./about.html") About
-        a(href="./services.html") Services
-        a(href="./blogs.html") Blogs
-        a(href="./contact.html") Contact
+        a(href="./home.html", class= pageTitle == "Home" ? activePage: "") Home
+        a(href="./about.html", class= pageTitle == "About" ? activePage: "") About
+        a(href="./services.html", class= pageTitle == "Services" ? activePage: "") Services
+        a(href="./blogs.html", class= pageTitle == "Blogs" ? activePage: "") Blogs
+        a(href="./contact.html", class= pageTitle == "Contact" ? activePage: "") Contact
 
     .icons
         i.fa.fa-bars(id="BarsButton")

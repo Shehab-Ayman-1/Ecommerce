@@ -62,7 +62,6 @@ html {
 	width: 100vw;
 	overflow-x: hidden;
 	scroll-behavior: smooth;
-
 	::-webkit-scrollbar {
 		width: 0.7rem;
 	}
@@ -135,12 +134,12 @@ body.nightMode {
 }
 
 .title {
+	@include Flex(center, center);
 	color: Get(dark);
 	font-size: 2.5em;
 	font-weight: 900;
 	padding: Get(p5);
 	text-align: center;
-	white-space: nowrap;
 	@include Width(md) {
 		font-size: 2em;
 		padding: Get(p3);
@@ -150,17 +149,19 @@ body.nightMode {
 		padding: Get(p1);
 	}
 	@include Width(xsm) {
-		font-size: 1.2em;
 		padding: Get(p0);
 	}
 	span {
 		background: Get(second-color);
 		color: Get(white);
-		padding: padding(p0, p5);
-		clip-path: polygon(100% 0, 95% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
-		will-change: clip-path padding width font-size;
+		font-size: 1em;
+		padding: 5px 40px;
+		clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+		@include Width(sm) {
+			font-size: 1em;
+		}
 		@include Width(xsm) {
-			padding: padding(p0, p4);
+			padding: 5px 20px;
 		}
 	}
 }

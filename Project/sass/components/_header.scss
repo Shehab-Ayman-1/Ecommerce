@@ -73,6 +73,9 @@ header {
 			&:hover {
 				color: Get(second-color);
 			}
+			&.active-page {
+				color: Get(second-color);
+			}
 			@include Width(md) {
 				color: Get(dark);
 				display: block;
